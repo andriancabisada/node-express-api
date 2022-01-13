@@ -1,2 +1,17 @@
+# NodeJS Web API
 
-<p>NodeJS Web API with Express, Sequelizer for creating models</p>
+## List Library Used
+
+  <ul>
+    <li>Express</li>
+    <li>Sequelizer</li>
+    <li>Postgres</li>
+  </ul> 
+  
+## Soon to be added
+
+  <ul>
+  <li>GraphQL</li>
+  <li>JWT Authentication</li>
+  <li>Authorization</li>
+  </ul>
