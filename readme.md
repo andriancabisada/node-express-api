@@ -8,7 +8,7 @@
     <li>Express</li>
     <li>Sequelizer</li>
     <li>Postgres</li>
-    <li></li>
+
   </ul> 
   
 ## Soon to be added
