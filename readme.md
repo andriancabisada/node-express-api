@@ -1,4 +1,6 @@
 # NodeJS Web API
+<img src="https://i.imgur.com/fwvPmZN.jpg"/>
+<img src="https://i.imgur.com/7SIuNBD.jpg"/>
 
 ## List Library Used
 
@@ -6,6 +8,7 @@
     <li>Express</li>
     <li>Sequelizer</li>
     <li>Postgres</li>
+    <li></li>
   </ul> 
   
 ## Soon to be added
