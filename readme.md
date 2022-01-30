@@ -1,6 +1,4 @@
 # NodeJS Web API
-<img src="https://i.imgur.com/fwvPmZN.jpg"/>
-<img src="https://i.imgur.com/7SIuNBD.jpg"/>
 
 ## List Library Used
 
@@ -24,3 +22,8 @@
   <li>GraphQL</li>
   <li>Authorization</li>
   </ul>
+
+
+## Screen shots
+<img src="https://i.imgur.com/fwvPmZN.jpg"/>
+<img src="https://i.imgur.com/7SIuNBD.jpg"/>
