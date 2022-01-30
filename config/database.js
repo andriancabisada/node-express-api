@@ -1,10 +1,8 @@
+const Sequelize = require('sequelize');
 
-
-import { Sequelize  } from 'sequelize';
-
-const db = new Sequelize('codegig', 'postgres', 'password311', {
+const db = new Sequelize('testdb', 'sa', 'password311', {
     host: 'localhost',
-    dialect: 'postgres',
+    dialect: 'mssql',
 
     pool: {
         max: 5,
@@ -14,4 +12,4 @@ const db = new Sequelize('codegig', 'postgres', 'password311', {
     }
   });
 
-  export default db;
+  module.exports = db;
