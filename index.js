@@ -13,7 +13,8 @@
  const fs = require('fs');
  //Error Middleware
 //  const { errorHandler, notFound } = require('./middleware/error');
- const app = express();
+const startServer = () => {
+  const app = express();
 
  const http = require('http');
  const server = http.createServer(app);
@@ -87,3 +88,6 @@ const sslServer = https.createServer({
 
 const port = process.env.PORT || 5000;
 sslServer.listen(port, () => console.log(`Server running on port ${port}`));
+};
+
+startServer();
