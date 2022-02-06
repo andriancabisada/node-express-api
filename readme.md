@@ -11,12 +11,12 @@
     <li>JWT Authentication</li>
       
   </ul> 
+  
 ## CI/CD
 
   <ul>
     <li>Elastic Beanstalk</li>
   <li>Code Pipeline</li>
-      
   </ul> 
 
 ## Database
