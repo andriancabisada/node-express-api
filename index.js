@@ -9,7 +9,8 @@
  const cors = require('cors');
  const passport = require('passport');
  const { errorHandler, notFound } = require('./middleware/error.js');
- 
+ const https = require('https');
+ const fs = require('fs');
  //Error Middleware
 //  const { errorHandler, notFound } = require('./middleware/error');
  const app = express();
@@ -54,7 +55,9 @@ db.authenticate()
 //routes
 app.use('/users', usersRoutes);
 
-app.get('/', (req, res) =>   res.send('Hello = require() Homepage'));
+app.get('/', (req, res, next) =>  {
+  res.send('Hello SSL Homepage')
+});
 
 
 
@@ -70,10 +73,17 @@ app.use(errorHandler)
 //starting io server
 socket(io)
 
+// const PORT = process.env.PORT || 5000;
+//   app.listen(PORT, () =>   console.log(`Server running on port: http://localhost:${PORT}`));
 
- const PORT = process.env.PORT || 5000;
- app.listen(PORT, () =>   console.log(`Server running on port: http://localhost:${PORT}`));
+// app.get('/', (req, res, next) => {
+//   res.send("Welcome to the home page. API is up and running");
+// });
 
-app.get('/', (req, res) => {
-  res.send("Welcome to the home page. API is up and running");
-});
+const sslServer = https.createServer({
+  key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
+  cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem'))
+}, app)
+
+const port = process.env.PORT || 5000;
+sslServer.listen(port, () => console.log(`Server running on port ${port}`));
