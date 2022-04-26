@@ -11,6 +11,7 @@ const passport = require("passport");
 const { errorHandler, notFound } = require("./middleware/error.js");
 const https = require("https");
 const fs = require("fs");
+
 //Error Middleware
 //  const { errorHandler, notFound } = require('./middleware/error');
 const startServer = () => {
@@ -71,10 +72,6 @@ const startServer = () => {
   // const PORT = process.env.PORT || 5000;
   //   app.listen(PORT, () =>   console.log(`Server running on port: http://localhost:${PORT}`));
 
-  // app.get('/', (req, res, next) => {
-  //   res.send("Welcome to the home page. API is up and running");
-  // });
-
   const sslServer = https.createServer(
     {
       key: fs.readFileSync(path.join(__dirname, "cert", "key.pem")),
@@ -84,7 +81,7 @@ const startServer = () => {
   );
 
   const port = process.env.PORT || 5000;
-  sslServer.listen(port, () => console.log(`Server running on port ${port}`));
+  app.listen(port, () => console.log(`Server running on port ${port}`));
 };
 
 startServer();
