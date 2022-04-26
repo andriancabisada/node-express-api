@@ -1,7 +1,6 @@
 // import req from 'express/lib/request';
 // import { v4 as uuidv4 } from 'uuid';
-const v4 = require("uuid");
-const uuidv4 = v4;
+const { v4: uuidv4 } = require("uuid");
 let users = [];
 
 exports.createUser = (req, res) => {
