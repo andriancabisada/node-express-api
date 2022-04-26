@@ -9,8 +9,8 @@ exports.createUser = (req, res) => {
 };
 
 exports.getUsers = async (req, res) => {
-  const user = await user.find();
-  res.send(users);
+  //const user = await user.find();
+  await res.send(users);
 };
 
 exports.getUser = async (req, res) => {
