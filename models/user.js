@@ -1,10 +1,9 @@
 const Sequelize = require("sequelize");
-const db = require("../config/database");
 
 module.exports = (Sequelize) => {
   const user = Sequelize.define("user", {
     id: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
       field: "id",
     },
     firstname: {
